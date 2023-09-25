@@ -383,6 +383,7 @@ void main_menu() {
     printf("6. Exit\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
+    int id,index;
 
     // Switch on the choice
     switch (choice) {
@@ -403,12 +404,7 @@ void main_menu() {
             display_employees();
             break;
         case 5:
-            // Declare a local variable to store the employee ID
-            int id;
-
-            // Declare a local variable to store the index
-            int index = -1;
-
+            index = -1;
             // Prompt the user to enter the employee ID
             printf("\nEnter the ID of the employee for payroll report: ");
             scanf("%d", &id);
