@@ -22,6 +22,10 @@ The purpose of this application is to provide a user-friendly interface for mana
 ## How to Use
 
 1. Clone the repository to your local machine.
+ ```bash
+   git clone https://github.com/MrRohanBatra/Employee-Payroll-System.git
+ cd Employee-Payroll-System
+   ```
 2. Compile the source code using a C compiler.
 3. Run the executable file.
 4. Follow the on-screen instructions to perform various operations.
