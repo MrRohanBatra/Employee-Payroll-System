@@ -26,9 +26,13 @@ The purpose of this application is to provide a user-friendly interface for mana
    git clone https://github.com/MrRohanBatra/Employee-Payroll-System.git
    cd Employee-Payroll-System
    ```
-2. Compile the source code using a C compiler.
-3. Run the executable file.
-4. Follow the on-screen instructions to perform various operations.
+2. Change the current working directory
+```bash
+   cd Employee-Payroll-System
+   ```
+3. Compile the source code using a C compiler.
+4. Run the executable file.
+5. Follow the on-screen instructions to perform various operations.
 
 ## Project Structure
 
