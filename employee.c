@@ -473,7 +473,7 @@ void save_data()
         // Write the employee details to the file
         for (int i = 0; i < n; i++) 
         {
-            fprintf(fp, "%s %d %s %.2f\n", emp[i].name, emp[i].id, emp[i].dept, emp[i].salary);
+            fprintf(fp, "%s\n%d\n%s\n%.2f\n", emp[i].name, emp[i].id, emp[i].dept, emp[i].salary);
         }
 
         // Close the file
