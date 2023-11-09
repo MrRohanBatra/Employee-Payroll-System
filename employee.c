@@ -8,7 +8,7 @@
 //structure to store employee details
 struct employee
  {
-    char name[50]; // Employee name
+    char name[500]; // Employee name
     int id; // Employee ID
     char dept[20]; // Employee department
     float salary; // Employee gross salary
@@ -88,7 +88,7 @@ void welcome()
 //function to say bye to user
 void bye()
 {
-    printf("BYE");
+    printf("\nBYE");
     printf("\nThankyou for using the application");
     printf("\nFind the project at github:https://github.com/MrRohanBatra/Employee-Payroll-System");
 }
@@ -97,6 +97,7 @@ void bye()
 void add_employee() 
 {
     char ch;
+    char first[50],last[50],name[100];
     do 
     {
         n++;
@@ -106,9 +107,10 @@ void add_employee()
 
         // Read the employee name
         printf("Name: ");
-        //scanf("%s", emp[n-1].name);
-        getchar(); // Consume the newline character left in the buffer
-        fgets(emp[n-1].name, sizeof(emp[n-1].name), stdin);
+        scanf("%s %s",first,last);
+        strcat(first," ");
+        strcat(first,last);
+        strcpy(emp[n-1].name, first);
         // Read the employee ID
         printf("ID: ");
         scanf("%d", &emp[n-1].id);
@@ -186,8 +188,11 @@ void modify_employee()
 
             // Read the new employee name
             printf("Name: ");
-            getchar(); // Consume the newline character left in the buffer
-            fgets(emp[n-1].name, sizeof(emp[n-1].name), stdin);
+            char first[50],last[50];
+            scanf("%s %s",first,last);
+            strcat(first," ");
+            strcat(first,last);
+            strcpy(emp[index].name, first);
             //scanf("%s", emp[index].name);
 
             // Read the new employee ID
@@ -473,9 +478,7 @@ void save_data()
         // Write the employee details to the file
         for (int i = 0; i < n; i++) 
         {
-            fprintf(fp, "%s", emp[i].name);
-            getchar();
-            fprintf(fp,"%d %s %.2f\n", emp[i].id, emp[i].dept, emp[i].salary);
+            fprintf(fp, "%s %d %s %.2f\n", emp[i].name, emp[i].id, emp[i].dept, emp[i].salary);
         }
 
         // Close the file
