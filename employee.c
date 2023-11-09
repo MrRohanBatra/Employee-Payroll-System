@@ -419,7 +419,7 @@ void generate_payroll_slip(struct employee e)
     FILE *fp;
 
     //Open the file in write mode
-    fp = fopen("payroll_slip.txt", "w");
+    fp = fopen("payroll_slip.txt","w");
 
     //Check if the file is opened successfully
     if (fp == NULL) 
@@ -430,14 +430,17 @@ void generate_payroll_slip(struct employee e)
     else 
     {
         // Write the payroll slip details to the file
-        fprintf(fp, "Payroll Slip of Employee %d\n", e.id);
-        fprintf(fp, "Name: %s\n", e.name);
-        fprintf(fp, "ID: %d\n", e.id);
+        fprintf(fp, "Payroll Slip\n");
+        fprintf(fp, "-------------------------\n");
+        fprintf(fp, "Employee Name: %s\n", e.name);
+        fprintf(fp, "Employee ID: %d\n", e.id);
         fprintf(fp, "Department: %s\n", e.dept);
         fprintf(fp, "Gross Salary: %.2f\n", e.salary);
-        fprintf(fp, "Net Salary: %.2f\n", net);
+        fprintf(fp, "-------------------------\n");
+        fprintf(fp, "Net Salary: %.2f\n", net_salary(e.salary));
         fprintf(fp, "Tax Payable: %.2f\n",tax(net));
-        fprintf(fp, "Pay Date: %s\n", date);
+        fprintf(fp, "-------------------------\n");
+
 
         // Close the file
         fclose(fp);
@@ -511,7 +514,7 @@ void load_data()
         fclose(fp);
 
         // Display a success message
-        printf("\nData loaded from the file!\n");
+        printf("\nSystem Check successfull!\nStarting........\n");
     }
 }
 
@@ -636,7 +639,7 @@ void main_menu()
         {
              index = -1;
             // Prompt the user to enter the employee ID
-            printf("\nEnter the ID of the employee for payroll report: ");
+            printf("\nEnter the ID of the employee for payroll slip generation: ");
             scanf("%d", &id);
 
             // Search for the employee with the given ID
@@ -668,6 +671,8 @@ void main_menu()
         }
         case 8:
         {
+            //bye function
+            bye();
             // Exit the program
             exit(0);
             break;

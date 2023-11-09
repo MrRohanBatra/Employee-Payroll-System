@@ -1,0 +1,9 @@
+Payroll Slip of Employee 1
+Name: Rohan Batra
+
+ID: 1
+Department: Ceo
+Gross Salary: 6513687.00
+Net Salary: 6188002.50
+Tax Payable: 1706400.75
+Pay Date: 09-11-2023
