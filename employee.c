@@ -106,7 +106,9 @@ void add_employee()
 
         // Read the employee name
         printf("Name: ");
-        scanf("%s", emp[n-1].name);
+        //scanf("%s", emp[n-1].name);
+        getchar(); // Consume the newline character left in the buffer
+        fgets(emp[n-1].name, sizeof(emp[n-1].name), stdin);
         // Read the employee ID
         printf("ID: ");
         scanf("%d", &emp[n-1].id);
@@ -184,8 +186,9 @@ void modify_employee()
 
             // Read the new employee name
             printf("Name: ");
-
-            scanf("%s", emp[index].name);
+            getchar(); // Consume the newline character left in the buffer
+            fgets(emp[n-1].name, sizeof(emp[n-1].name), stdin);
+            //scanf("%s", emp[index].name);
 
             // Read the new employee ID
             printf("ID: ");
