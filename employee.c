@@ -1,5 +1,4 @@
 // Employee Payroll System using C language
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -78,8 +77,8 @@ void welcome()
 {
     printf("Welcome to the Employee Payroll System!\n");
     printf("Developed by:\n");
-    printf("-> Rohan Batra                                   23104056\n");
-    printf("-> Shubham Rawat                                 231040xx\n");
+    printf("-> Rohan Batra\n");
+    printf("-> Shubham Rawat\n");
     printf("\nPurpose of the App:\n");
     printf("This application allows you to manage employee payroll information.\n");
     printf("You can add, modify, delete employees, generate payroll reports, and more.\n\n");
