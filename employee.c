@@ -475,7 +475,7 @@ void save_data()
         {
             fprintf(fp, "%s", emp[i].name);
             getchar();
-            fprintf(fp,"%d %s %.2f\n",, emp[i].id, emp[i].dept, emp[i].salary);
+            fprintf(fp,"%d %s %.2f\n", emp[i].id, emp[i].dept, emp[i].salary);
         }
 
         // Close the file
