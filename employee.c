@@ -301,7 +301,7 @@ void display_employees()
         {
             printf("\nEmployee %d:\n", i + 1);
             printf("Name: %s", emp[i].name);
-            printf("ID: %d\n", emp[i].id);
+            printf("ID:\n%d\n", emp[i].id);
             printf("Department: %s\n", emp[i].dept);
             printf("Gross Salary: %.2f\n", emp[i].salary);
         }
