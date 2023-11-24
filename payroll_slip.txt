@@ -1,1 +1,10 @@
-
+Payroll Slip
+-------------------------
+Employee Name: qbc xyzx
+Employee ID: 58569
+Department: jiit
+Gross Salary: 4257532.00
+-------------------------
+Net Salary: 4044655.50
+Tax Payable: 1063396.63
+-------------------------
